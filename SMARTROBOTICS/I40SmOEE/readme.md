@@ -3,7 +3,7 @@
 ## The OEE Index
 
 OEE stands for Overall Equipment effectiveness. 
-See the OEE page at [Wikipedia](https://en.wikipedia.org/wiki/Overall_equipment_effectiveness)
+The Wikipedia contributes a detailed description of the OEE [here](https://en.wikipedia.org/wiki/Overall_equipment_effectiveness)
 
 ## Base OEE Calculation
 
