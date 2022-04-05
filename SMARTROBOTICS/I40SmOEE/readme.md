@@ -10,6 +10,8 @@ The Wikipedia contributes a detailed description of the OEE [here](https://en.wi
 > oee = availability x performance x quality 
 
 
-## Detailed OEE Calculation Methods for systems which aim to use this model
+## Detailed OEE Calculation Methods 
+
+The methods below are useful examples for systems which aim to implement OEE Calculation Functions based on this model.
 
 ### Method 1
