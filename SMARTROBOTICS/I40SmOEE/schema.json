@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://smart-data-models.github.io/XXXSubjectXXX/XXXDataModelXXX/schema.json",
-  "title": "Smart Data models -XXXdataModelXXX schema",
-  "modelTags": "",
-  "description": "description of a generic entity. You have to change this.",
+  "$id": "https://smart-data-models.github.io/incubated/SMARTROBOTICS/I40SmOEE/schema.json",
+  "title": "Smart Data models - I40SmOEE schema",
+  "modelTags": "OEE",
+  "description": "I40 Submodel which integrates the necessary attributes to calculate and share the OEE of an I40 asset",
   "type": "object",
   "required": [
     "id",
@@ -19,91 +19,70 @@
     },
     {
       "properties": {
-        "field1XXX": {
+        "oee": {
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Model:'https://schema.org/Number'. Example of definition of a numerical attribute"
+          "description": "Property. Model:'https://schema.org/Number'. Result of the last OEE calculation"
+        },        
+        "availability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number'. Result of the last Availability calculation"
         },
-        "field2XXX": {
-          "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Example of definition of a numerical attribute"
+        "performance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number'. Result of the last Performance calculation"
         },
-        "field3XXX": {
+        "quality": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number'. Result of the last Performance calculation"
+        },
+        "maximumDuration": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Text'. Example of definition of a date-time attribute"
+          "description": "Property. Model:'https://schema.org/Text'. Size of a continuous time window which defines the maximum duration used in OEE calculations. It includes both, productive and non-productive periods of the selected time window. It is expressed according to the ISO_8601 model for durations https://en.wikipedia.org/wiki/ISO_8601#Durations."
         },
-        "relationship1XX": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Reference to the other entity"
-        },
-        "field4XXX": {
+        "idealProductionDuration": {
           "type": "string",
-          "enum": [
-            "val1",
-            "val2",
-            "val3"
-          ],
-          "description": "Property. Model:'https://schema.org/Text. Example of definition of a enumeration of strings"
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Amount of time for which an ideal asset would be available within the time window selected for the OEE calculation. It is expressed according to the ISO_8601 model for durations https://en.wikipedia.org/wiki/ISO_8601#Durations."
         },
-        "field5XXX": {
+        "idealCycleDuration": {
           "type": "string",
-          "enum": [
-            1,
-            2,
-            3
-          ],
-          "description": "Property. Model:'https://schema.org/Text. Example of definition of a enumeration of numbers"
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Duration of a good production cycle executed with ideal performance"
         },
-        "field6XXX": {
-          "type": "object",
-          "description": "Property. Model:'https://schema.org/Text. Example of definition of a enumeration of objects",
-          "properties": {
-            "subproperty1XXX": {
-              "type": "string"
-            },
-            "subproperty2XXX": {
-              "type": "number"
-            }
-          }
+        "idealGoodCycleCount": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. (idealProductionDuration/idealCycleDuration) Maximum amount of cycles for which an ideal asset would be available within the time window selected for the OEE session."
         },
-        "field7XXX": {
-          "type": "array",
-          "description": "Property. Model:'https://schema.org/Text. Example of definition of a arrayof strings",
-          "items": {
-            "type": "string",
-            "minitems": 3
-          }
+        "idealAvailabilityRatio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number'. A number between '0' and '1' 'idealAssetAvailability/maximumDuration'."
         },
-        "field8XXX": {
-          "type": "array",
-          "description": "Property. Model:'https://schema.org/Text. Example of definition of a array of numbers",
-          "items": {
-            "type": "number",
-            "minitems": 1
-          }
+        "actualAvailabilityDuration": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Actual amount of time for which the real asset was available within the time window selected for the OEE calculation. It is expressed according to the ISO_8601 model for durations https://en.wikipedia.org/wiki/ISO_8601#Durations."
         },
-        "field9XXX": {
-          "type": "boolean",
-          "description": "Property. Model:'https://schema.org/Boolean'. Example of definition of a boolean attribute"
+        "actualGoodCycleCount": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Actual amount of cycles in which the asset has performed well."
+        },
+        "actualCycleCount": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Actual amount of cycles which includes all the cycles started by the asset (good and bad cycles)."
         }
       }
     }
   ],
-  "derivedFrom": "",
   "license": ""
 }
