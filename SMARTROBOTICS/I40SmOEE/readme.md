@@ -1,7 +1,8 @@
-# I40 Submodule for Overall equipment effectiveness (OEE) Calculation
+# I40 Submodule for OEE Calculations
 
 ## The OEE Index
 
+OEE stands for Overall Equipment effectiveness 
 https://en.wikipedia.org/wiki/Overall_equipment_effectiveness
 
 ## Base OEE Calculation
