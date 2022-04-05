@@ -17,3 +17,12 @@ The methods below are useful examples for systems which aim to implement OEE Cal
 ![MCore OEE Attributes](oee_calculation_attributes.png "Core OEE attributes")
 
 ### OEE Calculation: Method 1
+
+* availability = actualAvailabilityDuration / idealProductionDuration
+
+* performance = actualGoodCyclesCount / idealGoodCyclesCount
+
+* quality = actualGoodCyclesCount / actualCycleCount 
+
+**OEE = availability X performance X quality**
+
