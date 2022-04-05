@@ -18,11 +18,11 @@ The methods below are useful examples for systems which aim to implement OEE Cal
 
 ### OEE Calculation: Method 1
 
-* availability = actualAvailabilityDuration / idealProductionDuration
+* **availability** = actualAvailabilityDuration / idealProductionDuration
 
-* performance = actualGoodCyclesCount / idealGoodCyclesCount
+* **performance** = actualGoodCyclesCount / idealGoodCyclesCount
 
-* quality = actualGoodCyclesCount / actualCycleCount 
+* **quality** = actualGoodCyclesCount / actualCycleCount 
 
-**OEE = availability X performance X quality**
+    **OEE** = **availability** X **performance** X **quality**
 
