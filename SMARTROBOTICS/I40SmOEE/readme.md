@@ -12,6 +12,8 @@ The Wikipedia contributes a detailed description of the OEE [here](https://en.wi
 
 ## Detailed OEE Calculation Methods 
 
-The methods below are useful examples for systems which aim to implement OEE Calculation Functions based on this model.
+The methods below are useful examples for systems which aim to implement OEE Calculation Functions based on this model. Despite some attributes to calculate the OEE are method specific, there is a set of first level attributes which are common to all of them. The Figure below summarizes the collection of *core attributes* of the OEE calculation according to this data model.
 
-### Method 1
+![MCore OEE Attributes](oee_calculation_attributes.png "Core OEE attributes")
+
+### OEE Calculation: Method 1
